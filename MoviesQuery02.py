@@ -5,7 +5,8 @@ from boto3.dynamodb.conditions import Key
 
 def query_and_project_movies(year, title_range, dynamodb=None):
     if not dynamodb:
-        dynamodb = boto3.resource('dynamodb', endpoint_url="http://localhost:8000")
+        #dynamodb = boto3.resource('dynamodb', endpoint_url="http://localhost:8000")
+        dynamodb = boto3.resource('dynamodb')
 
     table = dynamodb.Table('Movies')
     print(f"Get year, title, genres, and lead actor")
@@ -21,8 +22,8 @@ def query_and_project_movies(year, title_range, dynamodb=None):
 
 
 if __name__ == '__main__':
-    query_year = 1992
-    query_range = ('A', 'L')
+    query_year = 2013 
+    query_range = ('N', 'Z')
     print(f"Get movies from {query_year} with titles from "
           f"{query_range[0]} to {query_range[1]}")
     movies = query_and_project_movies(query_year, query_range)
