@@ -23,3 +23,7 @@ Here the Python files and some comments:
 * MoviesScan.py - scan the table (full table scan, as opposed to query which is always based on the primary key) - not advisable when handling large data
 * MoviesTransactWriteItems.py - this is not part of the origninal tutorial - a transaction of doing a put AND a delete as a transaction. If one of them fails, all is rolled back. Neat example because the syntax is somewhat complex.
 * MoviesDeleteTable.py - be aware that there is no "do you really want to delete" request :-)
+
+Hint regarding the consistence of the dataset:
+
+* Be aware that not all items carry the same amount of attributes. E.g. only in 4624 out of 4859 movie items you will find the attribute "info"
