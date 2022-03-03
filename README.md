@@ -1,7 +1,25 @@
 # DynamoDB-Movies-Python
 
-This repo is giving you all the needed Python files mentioned in https://github.com/typex1/DynamoDB-Movies-Python.git to enable you to get up to speed quickly.
+This repo is giving you all the needed Python files mentioned in the official AWS DynamoDB tutorial https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.01.html to enable you to get up to speed quickly.
 
-Some comments from me:
+Some adaptions and comments from my side:
 
-* one
+* In the code, I have commented out the local DynamoDB endpoint url "http://localhost:8000" to be able to do all actions directly in the real DynamoDB
+* I have added a short import data version "movies_small.json" containing only 3 instead of 4859 items in "movies.json" not to be overwhelmed by data in the table.
+* You can change the above import file name in MoviesLoadData.py
+
+Here the Python files and some comments:
+
+* MoviesCreateTable.py - creates the table with partition key 'year' (type Number) and sort key 'title' (String)
+* MoviesLoadData.py - this setup only loads only 3 items as mentioned above
+* MoviesQuery01.py - simple query based on the partition key (year) only
+* MoviesQuery02.py - query using partition key (year) and a range expression for the sort key (title)
+* MoviesItemOps01.py
+* MoviesItemOps02.py
+* MoviesItemOps03.py
+* MoviesItemOps04.py
+* MoviesItemOps05.py
+* MoviesItemOps06.py
+* MoviesScan.py
+* MoviesTransactWriteItems.py - this is not part of the origninal tutorial - a transaction of doing a put AND a delete as a transaction. If one of them fails, all is rolled back. Neat example because the syntax is somewhat complex.
+* MoviesDeleteTable.py - be aware that there is no "do you really want to delete" request :-)
