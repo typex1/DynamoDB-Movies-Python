@@ -11,7 +11,7 @@ Some adaptions and comments from my side:
 
 Table "Movies" structure:
 
-partition key 'year' (type Number) | sort key 'title' (String)| info (Map)
+Partition Key 'year' (type Number) | Sort Key 'title' (String)| Attribute 'info' (Map)
 --|--|--
 2013|Prisoners|{ "actors" : { "L" : [ { "S" : "Hugh Jackman" }, ...
 2014|X-Men: Days of Future Past|{ "actors" : { "L" : [ { "S" : "Jennifer Lawrence" }, ...
