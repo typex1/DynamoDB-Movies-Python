@@ -9,6 +9,7 @@ def transact_write_movie(dynamodb=None):
         client = boto3.client('dynamodb')
 
     #table = dynamodb.Table('Movies')
+    #doc: https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactWriteItems.html
     #doc: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html?highlight=transact_write_items#DynamoDB.Client.transact_write_items
     response = client.transact_write_items(
           TransactItems=[
