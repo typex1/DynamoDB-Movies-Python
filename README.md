@@ -8,6 +8,7 @@ Some adaptions and comments from my side:
 * I have added a shortened import data version **"movies_small.json"** containing only 10 instead of 4859 items in "movies.json" not to be overwhelmed by data in the table.
 * You can change the above import file name in MoviesLoadData.py
 
+
 Table "Movies" structure:
 
 partition key 'year' (type Number) | sort key 'title' (String)| info (Map)
@@ -30,6 +31,7 @@ Here the Python files and some comments:
 * MoviesScan.py - scan the table (full table scan, as opposed to query which is always based on the primary key) - not advisable when handling large data
 * MoviesTransactWriteItems.py - this is not part of the origninal tutorial - a transaction of doing a put AND a delete as a **transaction**. If one of them fails, all is rolled back. Neat example because the syntax is somewhat complex.
 * MoviesDeleteTable.py - be aware that there is no "do you really want to delete" request :-)
+
 
 Hint regarding the **cleanness** of the dataset:
 
