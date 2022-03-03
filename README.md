@@ -5,7 +5,7 @@ This repo is giving you all the needed Python files mentioned in the official AW
 Some adaptions and comments from my side:
 
 * In the code, I have commented out the local DynamoDB endpoint url "http://localhost:8000" to be able to do all actions directly in the real DynamoDB
-* I have added a short import data version "movies_small.json" containing only 3 instead of 4859 items in "movies.json" not to be overwhelmed by data in the table.
+* I have added a shortened import data version *"movies_small.json"* containing only 10 instead of 4859 items in "movies.json" not to be overwhelmed by data in the table.
 * You can change the above import file name in MoviesLoadData.py
 
 Here the Python files and some comments:
