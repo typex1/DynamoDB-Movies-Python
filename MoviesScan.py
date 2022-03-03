@@ -30,7 +30,7 @@ if __name__ == '__main__':
     def print_movies(movies):
         for movie in movies:
             print(f"\n{movie['year']} : {movie['title']}")
-            #pprint(movie['info'])
+            pprint(movie['info'])
 
     query_range = (2012, 2013)
     print(f"Scanning for movies released from {query_range[0]} to {query_range[1]}...")
