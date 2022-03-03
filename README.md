@@ -10,16 +10,16 @@ Some adaptions and comments from my side:
 
 Here the Python files and some comments:
 
-* MoviesCreateTable.py - creates the table with partition key 'year' (type Number) and sort key 'title' (String)
+* MoviesCreateTable.py - creates the table with primary key consisting of: partition key 'year' (type Number) and sort key 'title' (String)
 * MoviesLoadData.py - this setup only loads only 3 items as mentioned above
 * MoviesQuery01.py - simple query based on the partition key (year) only
 * MoviesQuery02.py - query using partition key (year) and a range expression for the sort key (title)
-* MoviesItemOps01.py
-* MoviesItemOps02.py
-* MoviesItemOps03.py
-* MoviesItemOps04.py
-* MoviesItemOps05.py
-* MoviesItemOps06.py
-* MoviesScan.py
+* MoviesItemOps01.py - simple put_item operation adding a new item
+* MoviesItemOps02.py - put_item based on year and title
+* MoviesItemOps03.py - simple update_item - be aware that updating a partition key or a sort key can only be done by deletion and re-creation (see transaction example below)
+* MoviesItemOps04.py - update_item - updating a counter (atomic operation, see tutorial)
+* MoviesItemOps05.py - update_item, but only under a certain condition. Very useful!
+* MoviesItemOps06.py - delete_item
+* MoviesScan.py - scan the table (full table scan, as opposed to query which is always based on the primary key) - not advisable when handling large data
 * MoviesTransactWriteItems.py - this is not part of the origninal tutorial - a transaction of doing a put AND a delete as a transaction. If one of them fails, all is rolled back. Neat example because the syntax is somewhat complex.
 * MoviesDeleteTable.py - be aware that there is no "do you really want to delete" request :-)
