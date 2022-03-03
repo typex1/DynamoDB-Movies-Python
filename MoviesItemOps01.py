@@ -4,7 +4,8 @@ import boto3
 
 def put_movie(title, year, plot, rating, dynamodb=None):
     if not dynamodb:
-        dynamodb = boto3.resource('dynamodb', endpoint_url="http://localhost:8000")
+        #dynamodb = boto3.resource('dynamodb', endpoint_url="http://localhost:8000")
+        dynamodb = boto3.resource('dynamodb')
 
     table = dynamodb.Table('Movies')
     response = table.put_item(

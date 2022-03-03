@@ -5,7 +5,8 @@ import boto3
 
 def increase_rating(title, year, rating_increase, dynamodb=None):
     if not dynamodb:
-        dynamodb = boto3.resource('dynamodb', endpoint_url="http://localhost:8000")
+        #dynamodb = boto3.resource('dynamodb', endpoint_url="http://localhost:8000")
+        dynamodb = boto3.resource('dynamodb')
 
     table = dynamodb.Table('Movies')
 

@@ -5,7 +5,8 @@ from botocore.exceptions import ClientError
 
 def get_movie(title, year, dynamodb=None):
     if not dynamodb:
-        dynamodb = boto3.resource('dynamodb', endpoint_url="http://localhost:8000")
+        #dynamodb = boto3.resource('dynamodb', endpoint_url="http://localhost:8000")
+        dynamodb = boto3.resource('dynamodb')
 
     table = dynamodb.Table('Movies')
 
