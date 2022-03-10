@@ -26,7 +26,7 @@ Here the Python files and some comments:
 * MoviesItemOps02.py - put_item based on year and title
 * MoviesItemOps03.py - simple update_item - be aware that updating a partition key or a sort key can only be done by deletion and re-creation (see **transaction** example below)
 * MoviesItemOps04.py - update_item - updating a counter (atomic operation, see tutorial)
-* MoviesItemOps05.py - update_item, but only under a certain condition. Very useful!
+* MoviesItemOps05.py - update_item, (here: remove the first entry from the actor list in a map) but only under a certain condition. Very useful!
 * MoviesItemOps06.py - delete_item
 * MoviesScan.py - scan the table (full table scan, as opposed to query which is always based on the primary key) - not advisable when handling large data
 * MoviesTransactWriteItems.py - this is not part of the origninal tutorial - a transaction of doing a put AND a delete as a **transaction**. If one of them fails, all is rolled back. Neat example because the syntax is somewhat complex.
