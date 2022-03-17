@@ -1,6 +1,6 @@
 # DynamoDB-Movies-Python
 
-This repo is giving you all the needed Python files mentioned in the official AWS DynamoDB tutorial https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.01.html to enable you to get up to speed quickly.
+This repo is giving you all the needed Python files mentioned in the official AWS DynamoDB tutorial https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.01.html to enable you to get up to speed quickly. - You do not need to copy them from the web pages.
 
 Some adaptions and comments from my side:
 
@@ -11,7 +11,7 @@ Some adaptions and comments from my side:
 
 Table "Movies" structure:
 
-Partition Key 'year' (type Number) | Sort Key 'title' (String)| Attribute 'info' (Map)
+Partition Key 'year' (datatype Number) | Sort Key 'title' (String)| Attribute 'info' (Map)
 --|--|--
 2013|Prisoners|{ "actors" : { "L" : [ { "S" : "Hugh Jackman" }, ...
 2014|X-Men: Days of Future Past|{ "actors" : { "L" : [ { "S" : "Jennifer Lawrence" }, ...
