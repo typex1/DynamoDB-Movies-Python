@@ -23,7 +23,7 @@ Here the Python files and some comments:
 * MoviesQuery01.py - simple query based on the partition key (year) only
 * MoviesQuery02.py - query using partition key (year) and a range expression for the sort key (title)
 * MoviesItemOps01.py - simple put_item operation adding a new item
-* MoviesItemOps02.py - put_item based on year and title
+* MoviesItemOps02.py - get_item based on year and title
 * MoviesItemOps03.py - simple update_item - be aware that updating a partition key or a sort key can only be done by deletion and re-creation (see **transaction** example below)
 * MoviesItemOps04.py - update_item - updating a counter (atomic operation, see tutorial)
 * MoviesItemOps05.py - update_item, (here: remove the first entry from the actor list in a map) but only under a certain condition. Very useful!
