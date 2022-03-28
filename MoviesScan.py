@@ -1,6 +1,7 @@
 from pprint import pprint
 import boto3
 from boto3.dynamodb.conditions import Key
+from botocore.exceptions import ClientError
 
 
 def scan_movies(year_range, display_movies, dynamodb=None):
@@ -30,7 +31,10 @@ if __name__ == '__main__':
     def print_movies(movies):
         for movie in movies:
             print(f"\n{movie['year']} : {movie['title']}")
-            pprint(movie['info'])
+            try:
+                pprint(movie['info'])
+            except KeyError as e:
+                print('error: movie has no {} data'.format(e))
 
     query_range = (2012, 2013)
     print(f"Scanning for movies released from {query_range[0]} to {query_range[1]}...")

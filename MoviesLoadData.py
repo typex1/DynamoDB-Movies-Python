@@ -17,6 +17,6 @@ def load_movies(movies, dynamodb=None):
 
 
 if __name__ == '__main__':
-    with open("moviedata_small.json") as json_file:
+    with open("moviedata.json") as json_file:
         movie_list = json.load(json_file, parse_float=Decimal)
     load_movies(movie_list)
