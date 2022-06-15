@@ -30,6 +30,8 @@ Here the Python files and some comments:
 * MoviesItemOps06.py - delete_item
 * MoviesScan.py - scan the table (full table scan, as opposed to query which is always based on the primary key) - not advisable when handling large data
 * MoviesTransactWriteItems.py - this is not part of the origninal tutorial - a transaction of doing a put AND a delete as a **transaction**. If one of them fails, all is rolled back. Neat example because the syntax is somewhat complex.
+* Z_MoviesCreateGlobalSecondaryIndex.py - If you want to perform a query which is NOT based on the partition key (here: year), but on a different attribute, e.g. 'title', you need to create an index (a Global Secondary Index) for this.
+* Z_MoviesQueryGlobalSecondaryIndex.py - Once the index is created (might take some 60 seconds), this is an example index-based query!
 * MoviesDeleteTable.py - be aware that there is no "do you really want to delete" request :-)
 
 
